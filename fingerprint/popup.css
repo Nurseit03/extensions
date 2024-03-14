@@ -4,29 +4,43 @@
   box-sizing: border-box;
 }
 
-.extension__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+body{
   width: 200px;
-  background-color: #f0f0f0; /* Цвет фона плагина*/
+}
+
+.container {
+  background-color: #f0f0f0;
   padding: 8px;
+}
+
+.content, .content__buttons{
+  width: 100%;
   gap: 8px;
 }
 
-.extension__container button {
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.content__buttons button {
   width: 100%;
   padding: 8px;
-  background-color: rgb(27, 170, 117); /* Цвет фона кнопок */
-  color: white; /* Цвет текста кнопок */
+  background-color: rgb(27, 170, 117); 
+  color: white; 
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.extension__container button:hover {
-  background-color: rgb(31, 160, 113); /* Цвет фона при наведении на кнопку */
+.content__buttons button:hover {
+  background-color: rgb(31, 160, 113);
 }
 
 #finger_logo {
