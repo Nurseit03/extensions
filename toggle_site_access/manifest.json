@@ -1,0 +1,11 @@
+{
+  "name": "Site access toggle",
+  "description": "Extension for block/allow sites",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "background": {}
+}
