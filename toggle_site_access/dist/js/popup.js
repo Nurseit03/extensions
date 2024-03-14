@@ -18439,18 +18439,20 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     var _this = this;
-    chrome.storage.renderSync.get(['toggleSitesActive', 'toggleSitesList'], function (result) {
+    chrome.storage.sync.get(['toggleSitesActive', 'toggleSitesList'], function (result) {
       _this.active = result.toggleSitesActive;
       _this.list = result.toggleSitesList;
     });
   },
   methods: {
     setActive: function setActive(active) {
-      console.log("SET active", active);
       this.active = active;
       chrome.storage.sync.set({
         toggleSitesActive: active
       }, function () {});
+      chrome.browserAction.setIcon({
+        path: this.icons[active ? 'active' : 'inactive']
+      });
     },
     saveList: function saveList() {
       chrome.storage.sync.set({
@@ -18487,41 +18489,40 @@ var _hoisted_4 = {
   "class": "content__buttons"
 };
 var _hoisted_5 = {
-  "class": "sites__container"
+  "class": "sites"
 };
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Список сайтов", -1 /* HOISTED */);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    type: "button",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["button__off", {
-      'button__active': !$data.active
+      'is-active': !$data.active
     }]),
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $options.setActive(false);
     })
   }, "OFF", 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    type: "button",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["button__on", {
-      'button__active': $data.active
+      'is-active': $data.active
     }]),
     onClick: _cache[1] || (_cache[1] = function ($event) {
       return $options.setActive(true);
     })
   }, "ON", 2 /* CLASS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+    rows: "8",
+    autocomplete: "off",
+    autocorrect: "off",
+    autocapitalize: "off",
+    spellcheck: "false",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.list = $event;
-    }),
-    rows: "3",
-    autocomplete: "off",
-    autocapitalize: "off",
-    spellcheck: "false"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.list]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    })
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.list]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     type: "button",
     "class": "button__save",
     onClick: _cache[3] || (_cache[3] = function () {
       return $options.saveList && $options.saveList.apply($options, arguments);
     })
-  }, "Сохранить список")])])]);
+  }, "Сохранить список")])]);
 }
 
 /***/ }),
@@ -18559,13 +18560,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Popup_vue_vue_type_template_id_a8fbc54a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Popup.vue?vue&type=template&id=a8fbc54a */ "./assets/js/components/Popup.vue?vue&type=template&id=a8fbc54a");
 /* harmony import */ var _Popup_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Popup.vue?vue&type=script&lang=js */ "./assets/js/components/Popup.vue?vue&type=script&lang=js");
-/* harmony import */ var C_Users_Admin_Desktop_extensions_toggle_site_access_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Admin_Desktop_extensions_toggle_site_access_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Popup_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Popup_vue_vue_type_template_id_a8fbc54a__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"assets/js/components/Popup.vue"]])
+const __exports__ = /*#__PURE__*/(0,_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Popup_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Popup_vue_vue_type_template_id_a8fbc54a__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"assets/js/components/Popup.vue"]])
 /* hot reload */
 if (false) {}
 

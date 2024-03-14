@@ -10,11 +10,11 @@
 chrome.runtime.onInstalled.addListener(function () {
   chrome.storage.sync.set({
     toggleSitesActive: false,
-    toggleSitesList: "test.com"
+    toggleSitesList: "example.com"
   }, function () {});
 });
 var toggleSitesActive = false;
-var toggleSitesList = "test.com";
+var toggleSitesList = "example.com";
 chrome.storage.sync.get(["toggleSitesActive", "toggleSitesList"], function (result) {
   toggleSitesActive = result.toggleSitesActive;
   toggleSitesList = result.toggleSitesList;
@@ -39,8 +39,8 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
     cancel: cancel
   };
 }, {
-  urls: ["<all_urls>"],
-  types: ["main_frame"]
+  urls: ["<all_urls>"]
+  // types: ["main_frame"],
 }, ["blocking"]);
 chrome.storage.onChanged.addListener(function (changes, namespace) {
   if (namespace === "sync") {
