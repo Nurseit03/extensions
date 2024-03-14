@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 250px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #7f8c8d;
+  -webkit-font-smoothing: anti-aliased;
+}
+
+.container {
+  background: rgba(35, 40, 46, 0.8470588235);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+}
+
+.content__title {
+  align-self: center;
+}
+
+.content__buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.content__buttons button {
+  width: 100%;
+  padding: 8px;
+  background-color: #ff4600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.content__buttons {
+  display: flex;
+}
+.content__buttons > button.button__on {
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+}
+.content__buttons > button.button__on.is-active, .content__buttons > button.button__on:hover {
+  border: 1px solid #e74c3c;
+  background: #e74c3c;
+  color: #fff;
+}
+.content__buttons > button.button__on:active {
+  border: 1px solid #e74c3c;
+  background: #e43725;
+  color: #fff;
+}
+.content__buttons > button.button__on:focus {
+  box-shadow: 0 0 0 2px #f29f97;
+}
+.content__buttons > button.button__off {
+  border: 1px solid #7f8c8d;
+  color: #7f8c8d;
+}
+.content__buttons > button.button__off.is-active, .content__buttons > button.button__off:hover {
+  border: 1px solid #7f8c8d;
+  background: #7f8c8d;
+  color: #fff;
+}
+.content__buttons > button.button__off:active {
+  border: 1px solid #7f8c8d;
+  background: #727f80;
+  color: #fff;
+}
+.content__buttons > button.button__off:focus {
+  box-shadow: 0 0 0 2px #b5bcbd;
+}
+
+button {
+  background: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1em;
+  border-radius: 4px;
+  border: 0;
+  margin-right: 8px;
+  padding: 6px 24px;
+}
+button:focus {
+  outline: 0;
+}
+button:hover {
+  cursor: pointer;
+}
+button.button__save {
+  background: #2c3e50;
+  color: #fff;
+  width: 100%;
+  padding: 8px 24px;
+}
+button.button__save:active {
+  background: #233140;
+}
+button.button__save:focus {
+  box-shadow: 0 0 0 2px #507192;
+}
+
+.sites {
+  margin: 16px 0 0;
+  box-sizing: border-box;
+}
+.sites p {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.sites textarea {
+  width: 100%;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border: 0;
+  background: #ecf0f1;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #2c3e50;
+  margin: 0 0 8px;
+  box-sizing: border-box;
+  resize: none;
+}
