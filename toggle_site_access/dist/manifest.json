@@ -6,6 +6,13 @@
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["scripting", "activeTab"],
-  "background": {}
+  "permissions": [
+    "storage",
+    "webRequest",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  }
 }
