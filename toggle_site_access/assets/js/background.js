@@ -2,14 +2,14 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set(
     {
       toggleSitesActive: false,
-      toggleSitesList: "youtube.com",
+      toggleSitesList: "example.com",
     },
     () => {}
   );
 });
 
 let toggleSitesActive = false;
-let toggleSitesList = "youtube.com";
+let toggleSitesList = "example.com";
 
 chrome.storage.sync.get(
   ["toggleSitesActive", "toggleSitesList"],
@@ -45,7 +45,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
   {
     urls: ["<all_urls>"],
-    types: ["main_frame"],
+    // types: ["main_frame"],
   },
   ["blocking"]
 );
