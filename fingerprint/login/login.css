@@ -1,0 +1,30 @@
+.content,
+.content__buttons {
+  width: 100%;
+  gap: 8px;
+}
+
+.content,
+.content__buttons {
+  width: 100%;
+  gap: 8px;
+}
+
+.content__buttons button {
+  width: 100%;
+  padding: 8px;
+  background-color: rgb(27, 170, 117);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.content__buttons button:hover {
+  background-color: rgb(31, 160, 113);
+}
+
+#loginInput {
+    padding: 5px;
+    width: 100%;
+}

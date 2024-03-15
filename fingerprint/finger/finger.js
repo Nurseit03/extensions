@@ -17,7 +17,6 @@ deviceBtn.addEventListener("click", () => {
 });
 
 async function sendRequest(url) {
-  console.log("start");
   const result = await fetch(url)
     .then((response) => {
       if (!response.ok) {
