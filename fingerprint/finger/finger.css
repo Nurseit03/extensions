@@ -1,32 +1,6 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body{
-  width: 200px;
-}
-
-.container {
-  background-color: #f0f0f0;
-  padding: 8px;
-}
-
 .content, .content__buttons{
   width: 100%;
   gap: 8px;
-}
-
-.center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.column{
-  display: flex;
-  flex-direction: column;
 }
 
 .content__buttons button {
